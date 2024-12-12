@@ -474,18 +474,150 @@ console.log(mainArr);
 // ----------------------------5 DALIS-----------------------------------------------------------
 
 // 4. Tęsiant darbą su ankstesniu masyvu atlikti šias užduotis naudojant for ciklą ir map/forEach metodą. Kiekvieną užduotį atlikti abiem būdais (for ciklu ir map/forEach metodu). Visus narius išvesti į konsole pagal žemiau pateiktas sąlygas:
+
 // 4.1. Tik skaičius (number tipo duomenis).
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number") {
+//         numbersOnly.push(' ' + mainArr[i]);
+//     }
+// }
+// console.log('For: ' + numbersOnly);
+
+// let task1 = [];
+// mainArr.map(num => {
+//     if (typeof num === 'number') {
+//         task1.push(' ' + num)
+//     }
+// });
+// console.log('Map: ' + task1);
+
 // 4.2. Tik tekstą (string tipo duomenis).
+
+// let textOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] !== "number") {
+//         textOnly.push(' ' + mainArr[i]);
+//     }
+// }
+// console.log('For: ' + textOnly);
+
+// let task2 = [];
+// mainArr.map(str => {
+//     if (typeof(str) !== 'number') {
+//         task2.push(' ' + str)       
+//     }
+// });
+// console.log('Map: ' + task2);
+
 // 4.3. Tik skaičius (number tipo duomenis) ir juos pakelti 4-tuoju laipsniu.
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number") {
+//         numbersOnly.push(' ' + mainArr[i] **4);
+//     }
+// }
+// console.log('For: ' + numbersOnly);
+
+// let task3 = [];
+// mainArr.map(num => {
+//     if (typeof num === 'number') {
+//         task3.push(' ' + num**4)
+//     }
+// });
+// console.log('Map: ' + task3);
+
 // 4.4. Tik skaičius (number tipo duomenis) ir prie jų pridėti 55.
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number") {
+//         numbersOnly.push(mainArr[i] + 55);
+//     }
+// }
+// console.log(numbersOnly);
+
+// let task4 = [];
+// mainArr.map(num => {
+//     if (typeof num === 'number') {
+//         task4.push(num + 55)
+//     }
+// });
+// console.log(task4);
+
 // 4.5. Tik skaičius (number tipo duomenis) ir juos padalinti iš 2.
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number") {
+//         numbersOnly.push(mainArr[i] / 2);
+//     }
+// }
+// console.log(numbersOnly);
+
+// let task4 = [];
+// mainArr.map(num => {
+//     if (typeof num === 'number') {
+//         task4.push(num / 2)
+//     }
+// });
+// console.log(task4);
+
+
 // 4.6. Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number") {
+//         numbersOnly.push('Number: ' + mainArr[i]);
+//     }
+// }
+// console.log(numbersOnly);
+
+// let task4 = [];
+// mainArr.map(num => {
+//     if (typeof num === 'number') {
+//         task4.push('Number: ' + num)
+//     }
+// });
+// console.log(task4);
+
+
 // 4.7. Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais, pvz.:
 //   "Index: 0, Number: 2"
 //   "Index: 1, Number: 3"
 //   "Index: 2, Number: 5"
 //   Ir t.t.
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number") {
+//         numbersOnly.push(`Index: ${i}, Number: ${mainArr[i]}`);
+//     }
+// }
+// console.log(numbersOnly);
+
+// let task4 = [];
+// mainArr.forEach((num, index) => {
+//     if (typeof num === 'number') {
+//         task4.push(`Index: ${index}, Number: ${num}`);
+//     }
+// });
+// console.log(task4);
+
 // 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number") {
+//         numbersOnly.push(mainArr[i] * i);
+//     }
+// }
+// console.log(numbersOnly);
+
+// let task1 = [];
+// mainArr.map((num, index) => {
+//     if (typeof num === 'number') {
+//         task1.push(num * index)
+//     }
+// });
+// console.log(task1);
+
 // 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
 //   - Pirmo skaičiaus dauginti nereikia.
 //   - Antrą skaičių dauginti iš pirmo.
@@ -493,9 +625,164 @@ console.log(mainArr);
 //   - Ketvirta skaičių dauginti iš trečio.
 //   - Penktą skaičių dauginti iš ketvirto.
 //   Ir t.t.
+
+// let multipliedFromPrevious = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//   if (typeof mainArr[i] === 'number') {
+//     let previousNumber = multipliedFromPrevious[multipliedFromPrevious.length - 1] || 1; // Ankstesnis skaičius arba 1, jei pirmas elementas
+//     multipliedFromPrevious.push(mainArr[i] * previousNumber);
+//   }
+// }
+// console.log(multipliedFromPrevious);
+
+// let multipliedFromPrevious = [];
+// mainArr.forEach((num) => {
+//   if (typeof num === 'number') {
+//     let previousNumber = multipliedFromPrevious[multipliedFromPrevious.length - 1] || 1; // Ankstesnis skaičius arba 1, jei pirmas elementas
+//     multipliedFromPrevious.push(num * previousNumber);
+//   }
+// });
+// console.log(multipliedFromPrevious);
+
+
 // 4.10. Tik tuos skaičius (number tipo duomenis), kuriuos padauginus iš 5, atsakymas gaunasi didesnis už 350.
+// let numbersOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//     if (typeof mainArr[i] === "number" && mainArr[i] * 5 > 350) {
+//         numbersOnly.push(mainArr[i]);
+//     }
+// }
+// console.log(numbersOnly);
+
+// let task1 = [];
+// mainArr.map((num) => {
+//     if (typeof num === 'number' && num * 5 > 350) {
+//         task1.push(num)
+//     }
+// });
+// console.log(task1);
+
+
 // 4.11. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti kiek simbolių jis turi, pvz. "Start has 5 symbols".
+
+// let textOnly = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//   if (typeof mainArr[i] === 'string') { 
+//     textOnly.push(`${mainArr[i]} has ${mainArr[i].length} symbols`);
+//   }
+// }
+// console.log(textOnly);
+
+// let task2 = [];
+// mainArr.map(str => {
+//     if (typeof(str) !== 'number') {
+//         task2.push(`${str} has ${str.length} symbols`)       
+//     }
+// });
+// console.log(task2);
+
+
 // 4.12. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio raidę išskiriant brūkšniu ir paverčiant ją didžiąja raide, pvz.: "S-T-A-R-T".
+
+// let separatedSymbols = [];
+
+// for (let i = 0; i < mainArr.length; i++) {
+//   if (typeof mainArr[i] === 'string') {
+//     let transformed = mainArr[i]
+//       .toUpperCase()                                // Paverčiame visas raides didžiosiomis
+//       .split('')                                    // Išskaidome tekstą į simbolius
+//       .join('-');                                   // Sujungiame simbolius su brūkšneliais
+//     separatedSymbols.push(transformed);
+//   }
+// }
+// console.log(separatedSymbols);
+
+// let separatedSymbols = [];
+// mainArr.forEach((str) => {
+//   if (typeof str === 'string') {
+//     let transformed = str
+//       .toUpperCase()       // Paverčiame visas raides didžiosiomis
+//       .split('')           // Išskaidome tekstą į simbolius
+//       .join('-');          // Sujungiame simbolius su brūkšneliais
+//     separatedSymbols.push(transformed);
+//   }
+// });
+// console.log(separatedSymbols);
+
+
 // 4.13. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio pirmą ir trečią raidę pakeičiant brūkšniu (underscore), pvz.: "_t_rt";
+
+// let transformedText = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//   if (typeof mainArr[i] === 'string') {
+//     let newWord = mainArr[i]
+//       .split('')                                                        // Išskaidome tekstą į simbolius
+//       .map((char, index) => (index === 0 || index === 2 ? '_' : char))  // Keičiam 1 ir 3 simbolį
+//       .join('');                                                        // Sujungiame simbolius atgal į žodį
+//     transformedText.push(newWord);
+//   }
+// }
+// console.log(transformedText);
+
+
+// let transformedText = [];
+// mainArr.forEach((str) => {
+//   if (typeof str === 'string') {
+//     let newWord = str
+//       .split('')                                                        // Išskaidome tekstą į simbolius
+//       .map((char, index) => (index === 0 || index === 2 ? '_' : char))  // Keičiam 1 ir 3 simbolį
+//       .join('');                                                        // Sujungiame simbolius atgal į žodį
+//     transformedText.push(newWord);
+//   }
+// });
+// console.log(transformedText);
+
 // 4.14. Tik tekstą (string tipo duomenis), tačiau žodį parašant atvirkščiai, pvz.: vietoje "start" parašyti "trats";
+// let reversedText = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//   if (typeof mainArr[i] === 'string') {
+//     let reversed = mainArr[i]
+//       .split('')                                                         // Išskaidome tekstą į simbolius
+//       .reverse()                                                         // Apverčiame simbolius
+//       .join('');                                                         // Sujungiame simbolius atgal į žodį
+//     reversedText.push(reversed);
+//   }
+// }
+// console.log(reversedText);
+
+
+// let reversedText = [];
+// mainArr.forEach((str) => {
+//   if (typeof str === 'string') {
+//     let reversed = str
+//       .split('')                                                            // Išskaidome tekstą į simbolius
+//       .reverse()                                                            // Apverčiame simbolius
+//       .join('');                                                            // Sujungiame simbolius atgal į žodį
+//     reversedText.push(reversed);
+//   }
+// });
+// console.log(reversedText);
+
+
 // 4.15. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti tarp kokių narių masyve jis yra, pvz.: "Word obuolys is between -5564 and -51 in the array".
+
+// let definedPlace = [];
+// for (let i = 0; i < mainArr.length; i++) {
+//   if (typeof mainArr[i] === 'string') {
+//     let previousElement = mainArr[i - 1] !== undefined ? mainArr[i - 1] : 'no previous';
+//     let nextElement = mainArr[i + 1] !== undefined ? mainArr[i + 1] : 'no next';
+//     definedPlace.push(`"${mainArr[i]}" is between ${previousElement} and ${nextElement} in the array`);
+//   }
+// }
+// console.log(definedPlace);
+
+
+// let definedPlace = [];
+// mainArr.forEach((str, index) => {
+//   if (typeof str === 'string') {
+//     let previousElement = mainArr[index - 1] !== undefined ? mainArr[index - 1] : 'no previous';
+//     let nextElement = mainArr[index + 1] !== undefined ? mainArr[index + 1] : 'no next';
+//     definedPlace.push(`"${str}" is between ${previousElement} and ${nextElement} in the array`);
+//   }
+// });
+// console.log(definedPlace);
